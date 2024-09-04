@@ -1,0 +1,59 @@
+{
+    "vendas": [
+        {
+          "id": "venda_001",
+          "dataVenda": "2024-08-17",
+          "produto": "Smartphone XYZ",
+          "categoria": "Eletrônicos",
+          "quantidade": 2,
+          "valorTotal": 3000.00,
+          "cliente": "João da Silva",
+          "cidade": "São Paulo",
+          "metodoPagamento": "Cartão de Crédito"
+        },
+        {
+          "id": "venda_002",
+          "dataVenda": "2024-08-18",
+          "produto": "Camiseta ABC",
+          "categoria": "Vestuário",
+          "quantidade": 5,
+          "valorTotal": 250.00,
+          "cliente": "Maria Oliveira",
+          "cidade": "Rio de Janeiro",
+          "metodoPagamento": "Dinheiro"
+        },
+        {
+          "id": "venda_003",
+          "dataVenda": "2024-08-19",
+          "produto": "Notebook DEF",
+          "categoria": "Eletrônicos",
+          "quantidade": 1,
+          "valorTotal": 4500.00,
+          "cliente": "Pedro Sousa",
+          "cidade": "Belo Horizonte",
+          "metodoPagamento": "Cartão de Crédito"
+        },
+        {
+          "id": "venda_004",
+          "dataVenda": "2024-08-20",
+          "produto": "Calça Jeans",
+          "categoria": "Vestuário",
+          "quantidade": 3,
+          "valorTotal": 450.00,
+          "cliente": "Ana Pereira",
+          "cidade": "Porto Alegre",
+          "metodoPagamento": "Boleto"
+        },
+        {
+          "id": "venda_005",
+          "dataVenda": "2024-08-21",
+          "produto": "Tablet GHI",
+          "categoria": "Eletrônicos",
+          "quantidade": 4,
+          "valorTotal": 3200.00,
+          "cliente": "Lucas Martins",
+          "cidade": "Curitiba",
+          "metodoPagamento": "Pix"
+        }
+    ]
+}
