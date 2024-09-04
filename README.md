@@ -1,27 +1,42 @@
-# GraphicProjectAngularBasic
+<!-- # GraphicProjectAngularBasic
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+Essa é uma aplicação simples que aborda o uso de graficos no Angular.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How to run the project
 
-## Code scaffolding
+1. **Clone the repository:**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+git clone git@github.com:Phyllipesa/angular-basic-graphic-project.git
+```
 
-## Build
+2. **Navigate to the project directory:**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+cd angular-basic-graphic-project
+```
 
-## Running unit tests
+3. **Install the dependencies:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install
+```
 
-## Running end-to-end tests
+3. **Run the application:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+```
 
-## Further help
+4. Access the application at: `http://localhost:4200`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Tecnologies
+
+ ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) </br>
+ ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+ -->
+
+
+# EM DESENVOLVIMENTO...
