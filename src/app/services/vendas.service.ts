@@ -8,11 +8,11 @@ import { Data } from '../_models/Data';
 })
 export class VendasService {
 
-  private apiUrl = 'http://localhost:3000/toPie'
+  private apiUrl = 'http://localhost:3000/'
 
   constructor(private http: HttpClient) { }
 
-  getGraphic() : Observable<Data[]> {
-    return this.http.get<Data[]>(this.apiUrl)
+  getGraphicInfo(graphicType: string) : Observable<Data[]> {
+    return this.http.get<Data[]>(`${this.apiUrl}${graphicType}`)
   }
 }
