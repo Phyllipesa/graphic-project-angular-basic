@@ -1,18 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Vendas } from '../_models/Venda';
+import { Data } from '../_models/Data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VendasService {
 
-  private apiUrl = 'http://localhost:3000/vendas'
+  private apiUrl = 'http://localhost:3000/toPie'
 
   constructor(private http: HttpClient) { }
 
-  getVendas() : Observable<Vendas[]> {
-    return this.http.get<Vendas[]>(this.apiUrl)
+  getGraphic() : Observable<Data[]> {
+    return this.http.get<Data[]>(this.apiUrl)
   }
 }
