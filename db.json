@@ -1,59 +1,104 @@
 {
-    "vendas": [
-        {
-          "id": 1,
-          "dataVenda": "2024-08-17",
-          "produto": "Smartphone XYZ",
-          "categoria": "Eletrônicos",
-          "quantidade": 2,
-          "valorTotal": 3000.00,
-          "cliente": "João da Silva",
-          "cidade": "São Paulo",
-          "metodoPagamento": "Cartão de Crédito"
-        },
-        {
-          "id": 2,
-          "dataVenda": "2024-08-18",
-          "produto": "Camiseta ABC",
-          "categoria": "Vestuário",
-          "quantidade": 5,
-          "valorTotal": 250.00,
-          "cliente": "Maria Oliveira",
-          "cidade": "Rio de Janeiro",
-          "metodoPagamento": "Dinheiro"
-        },
-        {
-          "id": 3,
-          "dataVenda": "2024-08-19",
-          "produto": "Notebook DEF",
-          "categoria": "Eletrônicos",
-          "quantidade": 1,
-          "valorTotal": 4500.00,
-          "cliente": "Pedro Sousa",
-          "cidade": "Belo Horizonte",
-          "metodoPagamento": "Cartão de Crédito"
-        },
-        {
-          "id": 4,
-          "dataVenda": "2024-08-20",
-          "produto": "Calça Jeans",
-          "categoria": "Vestuário",
-          "quantidade": 3,
-          "valorTotal": 450.00,
-          "cliente": "Ana Pereira",
-          "cidade": "Porto Alegre",
-          "metodoPagamento": "Boleto"
-        },
-        {
-          "id": 5,
-          "dataVenda": "2024-08-21",
-          "produto": "Tablet GHI",
-          "categoria": "Eletrônicos",
-          "quantidade": 4,
-          "valorTotal": 3200.00,
-          "cliente": "Lucas Martins",
-          "cidade": "Curitiba",
-          "metodoPagamento": "Pix"
-        }
-    ]
+  "toPie": [
+    {
+      "value": 50,
+      "name": "Eletrônicos"
+    },
+    {
+      "value": 72,
+      "name": "Vestuario"
+    }
+  ],
+
+  "toBar": [
+    {
+      "value": 21,
+      "name": "São Paulo"
+    },
+    {
+      "value": 48,
+      "name": "Rio de Janeiro"
+    },
+    {
+      "value": 12,
+      "name": "Belo Horizonte"
+    },
+    {
+      "value": 34,
+      "name": "Porto Alegre"
+    },
+    {
+      "value": 17,
+      "name": "Curitiba"
+    }
+  ],
+
+  "toLine": [
+    {
+      "value": 21,
+      "name": "2024-08-17"
+    },
+    {
+      "value": 48,
+      "name": "2024-08-18"
+    },
+    {
+      "value": 12,
+      "name": "2024-08-19"
+    },
+    {
+      "value": 34,
+      "name": "2024-08-20"
+    },
+    {
+      "value": 17,
+      "name": "2024-08-21"
+    }
+  ],
+
+  "toStacked": [
+    {
+      "value": 21,
+      "name": "Smartphone XYZ"
+    },
+    {
+      "value": 48,
+      "name": "Camiseta ABC"
+    },
+    {
+      "value": 12,
+      "name": "Notebook DEF"
+    },
+    {
+      "value": 34,
+      "name": "Calça Jeans"
+    },
+    {
+      "value": 17,
+      "name": "Tablet GHI"
+    }
+  ],
+
+  "toArea": [
+    {
+      "value": 21,
+      "name": "Smartphone XYZ"
+    },
+    {
+      "value": 48,
+      "name": "Camiseta ABC"
+    },
+    {
+      "value": 12,
+      "name": "Notebook DEF"
+    },
+    {
+      "value": 34,
+      "name": "Calça Jeans"
+    },
+    {
+      "value": 17,
+      "name": "Tablet GHI"
+    }
+  ]
 }
