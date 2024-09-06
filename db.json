@@ -1,5 +1,5 @@
 {
-  "toPie": [
+  "toBar": [
     {
       "value": 50,
       "name": "Eletrônicos"
@@ -10,7 +10,7 @@
     }
   ],
 
-  "toBar": [
+  "toPie": [
     {
       "value": 21,
       "name": "São Paulo"
