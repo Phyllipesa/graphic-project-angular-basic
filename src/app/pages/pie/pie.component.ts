@@ -23,45 +23,47 @@ export class PieComponent implements OnInit {
   constructor(private vendasService: VendasService) { }
 
   ngOnInit(): void {
-    this.carregarDados();
+    this.loadData();
   }
 
-  chartOptions: EChartsOption = {
-    title: {
-      text: 'Vendas',
-      subtext: 'Por Categoria de Produt',
-      left: 'center'
-    },
-    tooltip: {
-      trigger: 'item'
-    },
-    legend: {
-      orient: 'vertical',
-      left: 'left'
-    },
-    series: [
-      {
-        name: 'Vendas',
-        type: 'pie',
-        radius: '50%',
-        data: [],
-        emphasis: {
-          itemStyle: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)'
+  chartOptions: EChartsOption = {};
+
+  loadData() {
+    this.vendasService.getGraphicInfo("toPie").subscribe((response) => {
+      this.data = response;
+      this.loadCharOptions();
+    });
+  }
+
+  loadCharOptions() {
+    this.chartOptions = {
+      title: {
+        text: 'Vendas',
+        subtext: 'Total por cidade',
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        orient: 'vertical',
+        left: 'left'
+      },
+      series: [
+        {
+          name: 'Vendas',
+          type: 'pie',
+          radius: '50%',
+          data: this.data,
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
           }
         }
-      }
-    ]
-  };
-
-  carregarDados() {
-    this.vendasService.getGraphicInfo("toPie").subscribe((response) => {
-      if (this.chartOptions.series && Array.isArray(this.chartOptions.series) && this.chartOptions.series[0]) {
-        this.chartOptions.series[0].data = response;
-        console.log(response);       
-      }
-    });
+      ]
+    };
   }
 }
