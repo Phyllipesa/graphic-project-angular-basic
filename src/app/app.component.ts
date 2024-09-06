@@ -5,11 +5,12 @@ import { NavbarComponent } from "./_components/navbar/navbar.component";
 import { FooterComponent } from "./_components/footer/footer.component";
 import { BaseUiComponent } from "./_components/base-ui/base-ui.component";
 import { PieComponent } from './pages/pie/pie.component';
+import { BarComponent } from './pages/bar/bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, NavbarComponent, FooterComponent, BaseUiComponent, PieComponent],
+  imports: [RouterOutlet, HomeComponent, NavbarComponent, FooterComponent, BaseUiComponent, PieComponent, BarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
