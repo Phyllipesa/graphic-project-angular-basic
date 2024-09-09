@@ -8,6 +8,7 @@ import { PieComponent } from './pages/pie/pie.component';
 import { BarComponent } from './pages/bar/bar.component';
 import { LineComponent } from './pages/line/line.component';
 import { StackedComponent } from './pages/stacked/stacked.component';
+import { AreaComponent } from './pages/area/area.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { StackedComponent } from './pages/stacked/stacked.component';
     PieComponent, 
     BarComponent,
     LineComponent,
-    StackedComponent
+    StackedComponent,
+    AreaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
