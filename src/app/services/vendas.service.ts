@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Data } from '../_models/Data';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ export class VendasService {
 
   constructor(private http: HttpClient) { }
 
-  getGraphicInfo(graphicType: string) : Observable<Data[]> {
-    return this.http.get<Data[]>(`${this.apiUrl}${graphicType}`)
+  getGraphicInfo<T>(graphicType: string) : Observable<T>{
+    return this.http.get<T>(`${this.apiUrl}${graphicType}`)
   }
 }
