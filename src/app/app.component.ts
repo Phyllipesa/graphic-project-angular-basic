@@ -7,6 +7,7 @@ import { BaseUiComponent } from "./_components/base-ui/base-ui.component";
 import { PieComponent } from './pages/pie/pie.component';
 import { BarComponent } from './pages/bar/bar.component';
 import { LineComponent } from './pages/line/line.component';
+import { StackedComponent } from './pages/stacked/stacked.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { LineComponent } from './pages/line/line.component';
     BaseUiComponent, 
     PieComponent, 
     BarComponent,
-    LineComponent
+    LineComponent,
+    StackedComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
