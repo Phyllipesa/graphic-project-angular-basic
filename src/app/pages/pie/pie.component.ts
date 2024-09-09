@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Data } from '../../_models/Data';
+import { Line } from '../../_models/Line';
 import { VendasService } from '../../services/vendas.service';
 import { EChartsOption } from 'echarts'
 import { CommonModule } from '@angular/common';
 import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
+import { Pie } from '../../_models/Pie';
 
 @Component({
   selector: 'app-pie',
@@ -18,7 +19,8 @@ import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 
 export class PieComponent implements OnInit {
 
-  data: Data[]=[]; 
+  data!: Pie[]; 
+  chartOptions: EChartsOption = {};
 
   constructor(private vendasService: VendasService) { }
 
@@ -26,12 +28,12 @@ export class PieComponent implements OnInit {
     this.loadData();
   }
 
-  chartOptions: EChartsOption = {};
-
   loadData() {
-    this.vendasService.getGraphicInfo("toPie").subscribe((response) => {
-      this.data = response;
-      this.loadCharOptions();
+    this.vendasService.getGraphicInfo<Pie[]>("toPie").subscribe((response) => {
+      if (response) {
+        this.data = response;
+        this.loadCharOptions();
+      }
     });
   }
 
