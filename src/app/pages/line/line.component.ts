@@ -32,10 +32,6 @@ export class LineComponent implements OnInit {
     this.vendasService.getGraphicInfo("toLine").subscribe((response) => {
       this.dates = response.map((each) => each.name);
       this.values = response.map((each) => each.value);
-
-      console.log(this.dates);
-      console.log(this.values);
-      
       this.loadCharOptions();
     });
   }
