@@ -1,12 +1,13 @@
 {
   "toBar": [
     {
-      "value": 50,
-      "name": "Eletrônicos"
-    },
-    {
-      "value": 72,
-      "name": "Vestuario"
+      "categorias": [
+        "Eletrônicos",
+        "Vestuários"
+      ],
+      "quantidadeVendida": [
+        3, 2
+      ]
     }
   ],
 
@@ -35,47 +36,29 @@
 
   "toLine": [
     {
-      "value": 21,
-      "name": "2024-08-17"
-    },
-    {
-      "value": 48,
-      "name": "2024-08-18"
-    },
-    {
-      "value": 12,
-      "name": "2024-08-19"
-    },
-    {
-      "value": 34,
-      "name": "2024-08-20"
-    },
-    {
-      "value": 17,
-      "name": "2024-08-21"
+      "datas": [
+        "2024-08-17", 
+        "2024-08-18", 
+        "2024-08-19", 
+        "2024-08-20", 
+        "2024-08-21"
+      ],
+      "vendasDia": [
+        21, 48, 12, 34, 17
+      ]
     }
   ],
 
   "toStacked": [
     {
-      "value": 21,
-      "name": "Smartphone XYZ"
-    },
-    {
-      "value": 48,
-      "name": "Camiseta ABC"
-    },
-    {
-      "value": 12,
-      "name": "Notebook DEF"
-    },
-    {
-      "value": 34,
-      "name": "Calça Jeans"
-    },
-    {
-      "value": 17,
-      "name": "Tablet GHI"
+      "categorias": [
+        "Eletrônicos",
+        "Vestuários"
+      ],
+      "rawData": [[3, 2], [ 7, 8]],
+      "totalData": [
+        10, 10
+      ]
     }
   ],
 
