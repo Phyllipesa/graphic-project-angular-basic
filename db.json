@@ -64,24 +64,20 @@
 
   "toArea": [
     {
-      "value": 21,
-      "name": "Smartphone XYZ"
+      "metodoDePagamento": "Cartão de Crédito",
+      "quantidadeMes": [120, 132, 101, 154, 162]
     },
     {
-      "value": 48,
-      "name": "Camiseta ABC"
+      "metodoDePagamento": "Dinheiro",
+      "quantidadeMes": [220, 182, 191, 184, 155]
     },
     {
-      "value": 12,
-      "name": "Notebook DEF"
+      "metodoDePagamento": "Boleto",
+      "quantidadeMes":[150, 232, 201, 195, 192]
     },
     {
-      "value": 34,
-      "name": "Calça Jeans"
-    },
-    {
-      "value": 17,
-      "name": "Tablet GHI"
+      "metodoDePagamento": "Pix",
+      "quantidadeMes": [320, 332, 301, 320, 352]
     }
   ]
 }
