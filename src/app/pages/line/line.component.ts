@@ -3,6 +3,7 @@ import { VendasService } from '../../services/vendas.service';
 import { EChartsOption } from 'echarts'
 import { CommonModule } from '@angular/common';
 import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
+import { Line } from '../../_models/Line';
 
 @Component({
   selector: 'app-line',
@@ -17,8 +18,8 @@ import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 
 export class LineComponent implements OnInit {
 
-  dates: string[]=[]; 
-  values: number[]=[]; 
+  data!: Line;
+  chartOptions: EChartsOption = {};
 
   constructor(private vendasService: VendasService) { }
 
@@ -26,28 +27,29 @@ export class LineComponent implements OnInit {
     this.loadData();
   }
 
-  chartOptions: EChartsOption = {};
-
   loadData() {
-    this.vendasService.getGraphicInfo("toLine").subscribe((response) => {
-      this.dates = response.map((each) => each.name);
-      this.values = response.map((each) => each.value);
-      this.loadCharOptions();
+    this.vendasService.getGraphicInfo<Line[]>("toLine").subscribe((response) => {
+      if (response) {
+        this.data = response[0];
+        this.loadCharOptions();
+      }
     });
   }
 
   loadCharOptions() {
+    const { datas, vendasDia } = this.data
+
     this.chartOptions = {
       xAxis: {
         type: 'category',
-        data: this.dates
+        data: datas
       },
       yAxis: {
         type: 'value'
       },
       series: [
         {
-          data: this.values,
+          data: vendasDia,
           type: 'line'
         }
       ]
