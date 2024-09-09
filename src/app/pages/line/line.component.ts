@@ -40,6 +40,11 @@ export class LineComponent implements OnInit {
     const { datas, vendasDia } = this.data
 
     this.chartOptions = {
+      title: {
+        text: 'Vendas Semanais',
+        subtext: 'número de vendas ao longo dos dias da semana',
+        left: 'center'
+      },
       xAxis: {
         type: 'category',
         data: datas

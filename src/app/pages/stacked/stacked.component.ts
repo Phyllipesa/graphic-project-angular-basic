@@ -56,13 +56,19 @@ export class StackedComponent implements OnInit {
     });
     
     this.chartOptions = {
+      title: {
+        text: 'Vendas Por categoria',
+        left: 'center'
+      },
       legend: {
-        selectedMode: false
+        selectedMode: false,
+        left: 80,
+        top: 40
       },
       grid: {
         left: 100,
         right: 50,
-        top: 50,
+        top: 90,
         bottom: 50
       },
       xAxis: {

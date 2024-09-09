@@ -39,6 +39,11 @@ export class BarComponent implements OnInit {
     const { categorias, quantidadeVendida } = this.data;
 
     this.chartOptions = {
+      title: {
+        text: 'Venda Diaria',
+        subtext: 'por Categoria de Produto',
+        left: 'center'
+      },
       xAxis: {
         type: 'category',
         data: categorias
