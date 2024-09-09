@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Data } from '../../_models/Data';
 import { VendasService } from '../../services/vendas.service';
 import { EChartsOption } from 'echarts'
 import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
 import { CommonModule } from '@angular/common';
+import { Bar } from '../../_models/Bar';
 
 @Component({
   selector: 'app-bar',
@@ -17,9 +17,8 @@ import { CommonModule } from '@angular/common';
 })
 export class BarComponent implements OnInit {
 
-  categories: string[]=[]; 
-  values: number[]=[]; 
-
+  data!: Bar;
+  chartOptions: EChartsOption = {};
 
   constructor(private vendasService: VendasService) { }
 
@@ -27,25 +26,22 @@ export class BarComponent implements OnInit {
     this.loadData();
   }
 
-  chartOptions: EChartsOption = {};
-
   loadData() {
-    this.vendasService.getGraphicInfo("toBar").subscribe((response) => {
-      this.categories = response.map((each) => each.name);
-      this.values = response.map((each) => each.value);
-      this.loadChartOptions();
+    this.vendasService.getGraphicInfo<Bar[]>("toBar").subscribe((response) => {
+      if (response) {
+        this.data = response[0];
+        this.loadChartOptions();
+      }
     });
   }
 
   loadChartOptions() {
+    const { categorias, quantidadeVendida } = this.data;
+
     this.chartOptions = {
       xAxis: {
         type: 'category',
-        data: this.categories,
-        axisLabel: {
-          interval: 45,
-          rotate: 0
-        }
+        data: categorias
       },
       yAxis: {
         type: 'value'
@@ -53,7 +49,7 @@ export class BarComponent implements OnInit {
       series: [
         {
           name: 'Vendas (unit)',
-          data: this.values,
+          data: quantidadeVendida,
           type: 'bar',
           label: {
             show: true,
